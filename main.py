@@ -9,9 +9,17 @@ def display_board(board):
     print('-----------')
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
 
-# Function that will take player input
+# Function that will assign their marker as 'X' or 'O'
 def player_input():
-    pass
+    marker = ""
+
+    while not (marker == "X" or marker == "O"):
+        marker = input("Player 1: Do you want to be X or O?").upper()
+
+    if marker == "X":
+        return ("X", "O")
+    else:
+        return ("O", "X")
 
 # Function that will start a game
 def game_start():
